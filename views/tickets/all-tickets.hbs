@@ -1,0 +1,28 @@
+<div class="row">
+  {{#each tickets}}
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+           <h4 class="card-title d-flex justify-content-between align-items-center">
+             {{title}} <a href="/tickets/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+           </h4>
+           <p>{{create_date}}</p>
+           <p>{{type}}</p>
+           <p>{{description}}</p>
+           <form action="/tickets/delete/{{_id}}" method="POST">
+             <button class="btn btn-danger btn-block">
+               Delete
+             </button>
+           </form>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <div class="card mx-auto">
+      <div class="card-body">
+        <p class="lead">No hay tickets pendientes</p>
+        <a href="/tickets/add" class="btn btn-success btn-block">Crear uno</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

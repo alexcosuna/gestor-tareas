@@ -1,0 +1,35 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h3>Nuevo Ticket</h3>
+    </div>
+    <div class="card-body">
+      <form action="/tickets/new-ticket" method="post">
+        <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="Titulo">
+        </div>
+        <div class="form-group">
+          <select name="type" class="form-control" placeholder="Type">
+            <option value="Web">Web</option>
+            <option value="Interno">Interno</option>
+          </select >
+        </div>
+        <div class="form-group">
+          <textarea name="description" rows="8" cols="80" class="form-control" placeholder="Descripcion"></textarea>
+        </div>
+        <button type="submit" name="button" class="btn btn-primary btn-block">
+          Crear
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
