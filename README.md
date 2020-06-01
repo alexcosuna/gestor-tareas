@@ -1,5 +1,5 @@
 # gestor-tickets
-Aplicacion para la gestion de ticket
+Aplicacion para la gestion de tareas
 
 # Requisitos
 Node y el gestor NPM, que se pueden descargar [aqui](https://nodejs.org/es/download/)
